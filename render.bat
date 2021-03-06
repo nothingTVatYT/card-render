@@ -1,0 +1,1 @@
+"%ProgramFiles%\Blender Foundation\Blender 2.92\blender.exe" -b tabletop.blend -P card-render.py
