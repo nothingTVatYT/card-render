@@ -49,8 +49,9 @@ rnd_card=20
 cam_x=-0.09
 cam_y=0
 cam_z=0.27
-out_of_focus=True
-# focus plane distance
+# set to True for out-of-focus shots
+out_of_focus=False
+# focus plane distance (only if out_of_focus=True)
 focus_distance=10
 # -------------------------------------------------------------
 
