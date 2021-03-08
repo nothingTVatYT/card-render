@@ -27,7 +27,7 @@ def look_at(camera, point):
 # textures to use
 #card_texture='texture/nyid.jpg'
 #card_texture='texture/MargaretFishing_01_1.png'
-card_texture='texture/target-gift-card-regular.jpg'
+card_texture='texture/target-gift-card-back.jpg'
 #tabletop_color='texture/Wood049_2K_Color.jpg'
 #tabletop_displacement='texture/Wood049_2K_Displacement.jpg'
 #tabletop_normal='texture/Wood049_2K_Normal.jpg'
@@ -49,6 +49,9 @@ rnd_card=20
 cam_x=-0.09
 cam_y=0
 cam_z=0.27
+out_of_focus=True
+# focus plane distance
+focus_distance=10
 # -------------------------------------------------------------
 
 # get object pointers
@@ -79,6 +82,10 @@ bpy.data.images['Wood049_2K_Displacement.jpg'].filepath=tabletop_displacement
 bpy.data.images['Wood049_2K_Normal.jpg'].filepath=tabletop_normal
 bpy.data.images['Wood049_2K_Roughness.jpg'].filepath=tabletop_roughness
 bpy.data.images['lebombo_2k.hdr'].filepath=hdri
+
+if out_of_focus:
+	bpy.data.cameras["Camera"].dof.focus_object=None
+	bpy.data.cameras["Camera"].dof.focus_distance=focus_distance
 
 # render the scene
 file = next_output_name()
